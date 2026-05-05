@@ -8,6 +8,7 @@ module.exports = {
       interpreter: "./venv/bin/python3",
       env: {
         NODE_ENV: "production",
+        PYTHONDONTWRITEBYTECODE: "1",
       },
       // Restart policy
       autorestart: true,

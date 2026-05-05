@@ -13,7 +13,7 @@ __pycache__/
 *.pyd
 
 # Database (opsional - uncomment jika tidak ingin file data ikut ter-push)
-# data/*.json
+data/*.json
 
 # Catatan Belajar Pribadi
 LEARNING.md
