@@ -3,7 +3,10 @@ from datetime import datetime
 from pathlib import Path
 
 # Paths to local JSON "databases"
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent / "data"
+# Create data dir if it doesn't exist
+BASE_DIR.mkdir(exist_ok=True)
+
 FRIDGE_PATH = BASE_DIR / "fridge.json"
 RECIPES_PATH = BASE_DIR / "recipes.json"
 HISTORY_PATH = BASE_DIR / "history.json"

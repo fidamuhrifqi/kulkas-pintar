@@ -3,7 +3,7 @@ import logging
 import re
 from openai import OpenAI, APITimeoutError, APIConnectionError, APIStatusError
 
-from config import MINIMAX_API_KEY, MINIMAX_BASE_URL, MODEL_LIGHT, MODEL_HEAVY
+from core.config import MINIMAX_API_KEY, MINIMAX_BASE_URL, MODEL_LIGHT, MODEL_HEAVY
 
 logger = logging.getLogger("kulkas-bot")
 

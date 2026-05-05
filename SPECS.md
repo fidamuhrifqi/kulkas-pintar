@@ -4,16 +4,16 @@
 - **Bahasa Pemrograman:** Python 3.10+
 - **Framework Bot:** `python-telegram-bot` (versi 21+)
 - **AI / LLM Integration:** `openai` (Python SDK) untuk terhubung dengan MiniMax API (Model yang didukung: MiniMax-M2.5 / MiniMax-M2.7).
-- **Database / Penyimpanan:** Penyimpanan lokal berbasis file JSON (`fridge.json`, `recipes.json`, `history.json`). Sistem tidak memerlukan instalasi database server yang rumit.
+- **Database / Penyimpanan:** Penyimpanan lokal berbasis file JSON di dalam folder `data/` (`data/fridge.json`, `data/recipes.json`, `data/history.json`). Sistem tidak memerlukan instalasi database server yang rumit.
 - **Process Manager:** Mendukung **PM2** (via `ecosystem.config.js`) untuk proses _deployment_ di server / VPS.
 
 ## Struktur Direktori (Modular)
 Sistem ini menggunakan struktur _clean code_ (modular) untuk memudahkan pemeliharaan:
-- `bot.py`: Berkas utama (entry point) berisi inisialisasi aplikasi dan _handlers_ rute pesan Telegram.
-- `ai_service.py`: Layanan khusus untuk memanggil API AI (MiniMax) dan melakukan _parsing_ JSON dari model LLM.
-- `config.py`: Pengaturan sistem dan pembacaan _Environment Variables_.
-- `prompts.py`: Berisi berbagai sistem prompt instruksi AI (seperti prompt parsing stok, prompt chat biasa, dan prompt keluar barang pintar).
-- `storage.py`: Modul I/O sederhana untuk membaca dan menulis data ke _database_ JSON lokal.
+- `bot.py`: Berkas utama (entry point) yang hanya berisi inisialisasi aplikasi dan _routing_.
+- `handlers/`: Folder berisi logika spesifik Telegram (misalnya antarmuka menu, logika masuk/keluar, dsb).
+- `services/`: Folder berisi layanan sistem seperti koneksi ke AI (`ai_service.py`) dan operasi file JSON (`storage.py`).
+- `core/`: Folder berisi konstanta inti seperti *Environment Variables* (`config.py`) dan instruksi LLM (`prompts.py`).
+- `data/`: Folder tempat disimpannya database lokal JSON (otomatis dibuat jika belum ada).
 
 ---
 
@@ -70,7 +70,13 @@ python bot.py
 ```
 
 **Cara B: Menjalankan menggunakan PM2 (untuk Production / Server VPS)**
-Jika bot ingin dibiarkan menyala terus di background VPS Anda, gunakan PM2 (butuh Node.js).
+Jika bot ingin dibiarkan menyala terus di background VPS Anda, gunakan PM2 (butuh Node.js). 
+
+Sebelum menjalankan PM2, pastikan Anda melakukan 2 hal berikut:
+1. **Buat folder `logs`**: PM2 membutuhkan folder ini untuk menyimpan log. Buat foldernya dengan perintah `mkdir logs` (di terminal).
+2. **Cek `ecosystem.config.js`**: Pastikan pengaturan `interpreter` di dalam file tersebut sudah sesuai dengan *virtual environment* OS Anda (cek komentar di dalam file tersebut untuk panduan Linux vs Windows).
+
+Setelah siap, jalankan:
 ```bash
 # Jika PM2 belum terinstall:
 npm install -g pm2

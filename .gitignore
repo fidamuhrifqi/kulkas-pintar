@@ -12,10 +12,11 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Database (optional - uncomment if you want to ignore the JSON data when pushing)
-# fridge.json
-# recipes.json
-# history.json
+# Database (opsional - uncomment jika tidak ingin file data ikut ter-push)
+# data/*.json
+
+# Catatan Belajar Pribadi
+LEARNING.md
 
 # IDE
 .vscode/

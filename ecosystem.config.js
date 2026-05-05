@@ -3,8 +3,9 @@ module.exports = {
     {
       name: "kulkas-bot",
       script: "bot.py",
+      // Gunakan "./venv/Scripts/python" untuk Windows
+      // Gunakan "./venv/bin/python3" untuk Linux/Mac
       interpreter: "./venv/bin/python3",
-      cwd: "/home/ubuntu/kulkas-pintar/kulkas-bot",
       env: {
         NODE_ENV: "production",
       },
