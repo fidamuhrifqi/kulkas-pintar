@@ -1,0 +1,22 @@
+# Environment Variables
+.env
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Database (optional - uncomment if you want to ignore the JSON data when pushing)
+# fridge.json
+# recipes.json
+# history.json
+
+# IDE
+.vscode/
+.idea/

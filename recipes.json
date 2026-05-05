@@ -1,0 +1,65 @@
+[
+  {
+    "nama": "Telur Pontianak",
+    "bahan": [
+      {
+        "nama": "telur",
+        "qty": 3,
+        "satuan": "butir"
+      },
+      {
+        "nama": "bawang daun",
+        "qty": 2,
+        "satuan": "batang"
+      },
+      {
+        "nama": "bawang putih",
+        "qty": 3,
+        "satuan": "siung"
+      },
+      {
+        "nama": "cabe keriting",
+        "qty": 4,
+        "satuan": "butir"
+      },
+      {
+        "nama": "kecap manis",
+        "qty": 2,
+        "satuan": "sendok makan"
+      },
+      {
+        "nama": "kecap asin",
+        "qty": 2,
+        "satuan": "sendok makan"
+      },
+      {
+        "nama": "merica/lada",
+        "qty": 1,
+        "satuan": "secubit"
+      },
+      {
+        "nama": "totole",
+        "qty": 1,
+        "satuan": "secubit"
+      },
+      {
+        "nama": "air",
+        "qty": 3,
+        "satuan": "sendok makan"
+      },
+      {
+        "nama": "garam",
+        "qty": 1,
+        "satuan": "secubit"
+      }
+    ],
+    "langkah": [
+      "Goreng bawang putih sampai coklat keemasan dengan api kecil, angkat dan tiriskan.",
+      "Goreng telur sampai setengah matang.",
+      "Masukan campuran dari 2 sendok kecap manis, 2 sendok kecap asin, 3 sendok air, garam, dan lada.",
+      "Masak sampai sedikit surut, lalu masukan bawang daun.",
+      "Taburi bawang putih goreng di atasnya."
+    ],
+    "link": "https://vt.tiktok.com/ZS9XWcVQR/"
+  }
+]
